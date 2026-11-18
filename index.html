@@ -1,0 +1,210 @@
+<!doctype html>
+<!-- The download page (change-22: Releases and updates): the newest release from the download
+     repo's GitHub API, so the page needn't be rebuilt for a release -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kit Chaos</title>
+    <meta name="description" content="From gear chaos to packed and ready: every piece you own and every list you pack, in one library that stays with you." />
+    <link rel="icon" href="icon.png" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --text: light-dark(#1d1d1f, #f5f5f7);
+        --text-2: light-dark(#6e6e73, #a1a1a6);
+        --surface: light-dark(#fbfbfd, #000);
+        --card: light-dark(#fff, #1c1c1e);
+        --line: light-dark(#d2d2d7, #38383a);
+        --accent: light-dark(#6e4bd8, #a48bff);
+        --glow: light-dark(#e9e2ff, #2a1f4d);
+        --radius: 18px;
+        font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        background: var(--surface);
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+      }
+      main {
+        display: grid;
+        justify-items: center;
+        gap: 72px;
+        padding: 96px 20px 64px;
+        background: radial-gradient(ellipse 80% 520px at 50% 0, var(--glow), transparent);
+      }
+      .hero {
+        display: grid;
+        justify-items: center;
+        gap: 20px;
+        text-align: center;
+      }
+      .hero img {
+        width: 160px;
+        height: 160px;
+        filter: drop-shadow(0 18px 30px rgb(0 0 0 / 0.25));
+      }
+      h1 {
+        font-size: clamp(44px, 8vw, 72px);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+      .claim {
+        margin-top: -8px;
+        font-size: clamp(24px, 4vw, 34px);
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+      .motto {
+        font-weight: 600;
+        color: var(--accent);
+      }
+      .tagline {
+        max-width: 560px;
+        font-size: clamp(20px, 3vw, 26px);
+        line-height: 1.3;
+        color: var(--text-2);
+      }
+      .download {
+        display: grid;
+        justify-items: center;
+        gap: 10px;
+        margin-top: 12px;
+      }
+      .button {
+        padding: 14px 30px;
+        border-radius: 999px;
+        background: var(--accent);
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .button:hover {
+        filter: brightness(1.1);
+      }
+      .meta {
+        font-size: 14px;
+        color: var(--text-2);
+      }
+      .screenshot {
+        width: min(1400px, 100%);
+        display: grid;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: 0 40px 80px -30px rgb(0 0 0 / 0.35);
+        overflow: hidden;
+      }
+      .screenshot img {
+        width: 100%;
+        height: auto;
+      }
+      .features {
+        width: min(1000px, 100%);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+      }
+      .feature {
+        display: grid;
+        align-content: start;
+        gap: 8px;
+        padding: 24px;
+        border-radius: var(--radius);
+        background: var(--card);
+        border: 1px solid var(--line);
+      }
+      .feature h2 {
+        font-size: 19px;
+        font-weight: 600;
+      }
+      .feature p {
+        font-size: 15px;
+        line-height: 1.45;
+        color: var(--text-2);
+      }
+      footer {
+        display: grid;
+        justify-items: center;
+        gap: 12px;
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 0 20px 72px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--text-2);
+      }
+      footer a {
+        color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <img src="icon.png" alt="" />
+        <h1>Kit Chaos</h1>
+        <p class="claim">From gear chaos to packed and ready.</p>
+        <p class="tagline">Every piece you own and every list you pack, in one calm library that stays with you.</p>
+        <div class="download">
+          <a class="button" id="download" href="https://github.com/c-heer/KitChaosDownloads/releases/latest">Download for Mac</a>
+          <span class="meta" id="meta">macOS 13 Ventura or newer · Apple silicon and Intel</span>
+        </div>
+      </section>
+
+      <!-- A screenshot made by hand -->
+      <div class="screenshot">
+        <img src="screenshot.jpg" alt="Kit Chaos showing a packing list with its gear in a grid" />
+      </div>
+
+      <section class="features">
+        <div class="feature">
+          <h2>All your gear</h2>
+          <p>Every piece with photo, brand, weight, price and notes, in categories you arrange.</p>
+        </div>
+        <div class="feature">
+          <h2>Packing lists</h2>
+          <p>Collections for every trip, with base, worn and consumable weight at a glance.</p>
+        </div>
+        <div class="feature">
+          <h2>Pack and go</h2>
+          <p>Turn a list into a checklist: tick off what's packed and see what's left.</p>
+        </div>
+        <div class="feature">
+          <h2>Your data stays yours</h2>
+          <p>The library lives in a folder you choose, like iCloud Drive or Dropbox. No account, no server.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p class="motto">Because kit happens.</p>
+      <p>
+        The app isn't signed yet. On the first start macOS refuses to open it: open System Settings › Privacy &amp; Security,
+        scroll down and click Open Anyway.
+      </p>
+      <a href="https://github.com/c-heer/KitChaosDownloads/releases">Older versions</a>
+    </footer>
+
+    <script>
+      // The newest release: its .dmg on the button, its version and date below
+      fetch('https://api.github.com/repos/c-heer/KitChaosDownloads/releases/latest')
+        .then((response) => (response.ok ? response.json() : Promise.reject()))
+        .then((release) => {
+          const dmg = release.assets.find((asset) => asset.name.endsWith('.dmg'));
+          if (dmg) document.getElementById('download').href = dmg.browser_download_url;
+          const date = new Date(release.published_at).toLocaleDateString(undefined, { dateStyle: 'long' });
+          document.getElementById('meta').textContent =
+            `Version ${release.tag_name.replace(/^v/, '')} · ${date} · macOS 13 or newer · Apple silicon and Intel`;
+        })
+        .catch(() => {
+          // No release yet or offline: the button leads to the release list
+        });
+    </script>
+  </body>
+</html>
