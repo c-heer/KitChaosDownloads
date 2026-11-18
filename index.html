@@ -153,7 +153,7 @@
         <p class="tagline">Every piece you own and every list you pack, in one calm library that stays with you.</p>
         <div class="download">
           <a class="button" id="download" href="https://github.com/c-heer/KitChaosDownloads/releases/latest">Download for Mac</a>
-          <span class="meta" id="meta">macOS 13 Ventura or newer · Apple silicon and Intel</span>
+          <span class="meta" id="meta">For Macs with Apple silicon · macOS 13 Ventura or newer</span>
         </div>
       </section>
 
@@ -200,7 +200,7 @@
           if (dmg) document.getElementById('download').href = dmg.browser_download_url;
           const date = new Date(release.published_at).toLocaleDateString(undefined, { dateStyle: 'long' });
           document.getElementById('meta').textContent =
-            `Version ${release.tag_name.replace(/^v/, '')} · ${date} · macOS 13 or newer · Apple silicon and Intel`;
+            `Version ${release.tag_name.replace(/^v/, '')} · ${date} · For Macs with Apple silicon · macOS 13 or newer`;
         })
         .catch(() => {
           // No release yet or offline: the button leads to the release list
